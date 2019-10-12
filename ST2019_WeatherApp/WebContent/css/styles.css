@@ -1,0 +1,50 @@
+/* Selector за всички елементи */
+* {
+    box-sizing: border-box;
+}
+
+/* Selector по таг */
+body {
+    background-color: #f1f1f1;
+}
+
+/* Selector по id */
+#main-container {
+    background-color: #ffffff;
+    padding: 100px;
+    display: flex;
+}
+
+/* Selector по class */
+.main-item {
+    background-color: rgb(61, 155, 61);
+    padding: 5px;
+    flex: 1; 
+    border-radius: 5px;
+    border: 1px solid #2c802c;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+}
+/* Selector за минаване с мишката върху елемент */
+.main-item:hover {
+    background-color: rgb(74, 190, 74);
+}
+
+/* Selector за елемент следван от друг елемент */
+.main-item + .main-item {
+    margin-left: 45px;
+}
+
+/* Selector, който е специфичен само за контейнер с клас .main-item */
+.main-item .main-img {
+    width: 100%;
+}
+
+.main-item .main-heading {
+    font-size: 22px;
+    font-weight: bold;
+}
+.main-item .main-description {
+    font-size: 18px;
+}
