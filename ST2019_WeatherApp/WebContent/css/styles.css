@@ -1,21 +1,22 @@
-/* Selector Р·Р° РІСЃРёС‡РєРё РµР»РµРјРµРЅС‚Рё */
+/* Selector за всички елементи */
 * {
     box-sizing: border-box;
 }
 
-/* Selector РїРѕ С‚Р°Рі */
+/* Selector по таг */
 body {
     background-color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Selector РїРѕ id */
+/* Selector по id */
 #main-container {
     background-color: #ffffff;
     padding: 100px;
     display: flex;
 }
 
-/* Selector РїРѕ class */
+/* Selector по class */
 .main-item {
     background-color: rgb(61, 155, 61);
     padding: 5px;
@@ -26,17 +27,17 @@ body {
     cursor: pointer;
     box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
 }
-/* Selector Р·Р° РјРёРЅР°РІР°РЅРµ СЃ РјРёС€РєР°С‚Р° РІСЉСЂС…Сѓ РµР»РµРјРµРЅС‚ */
+/* Selector за минаване с мишката върху елемент */
 .main-item:hover {
     background-color: rgb(74, 190, 74);
 }
 
-/* Selector Р·Р° РµР»РµРјРµРЅС‚ СЃР»РµРґРІР°РЅ РѕС‚ РґСЂСѓРі РµР»РµРјРµРЅС‚ */
+/* Selector за елемент следван от друг елемент */
 .main-item + .main-item {
     margin-left: 45px;
 }
 
-/* Selector, РєРѕР№С‚Рѕ Рµ СЃРїРµС†РёС„РёС‡РµРЅ СЃР°РјРѕ Р·Р° РєРѕРЅС‚РµР№РЅРµСЂ СЃ РєР»Р°СЃ .main-item */
+/* Selector, който е специфичен само за контейнер с клас .main-item */
 .main-item .main-img {
     width: 100%;
 }
