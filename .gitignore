@@ -17,3 +17,6 @@ tmp/
 *~.nib
 local.properties
 .loadpath
+node_modules/
+.idea/
+ST2019_WeatherApp/WebContent/node_modules/

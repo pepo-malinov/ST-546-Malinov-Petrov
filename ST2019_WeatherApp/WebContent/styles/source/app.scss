@@ -1,0 +1,21 @@
+// Load Bootstrap scss functionality
+
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+// Load your custom variables to theme Bootstrap
+@import "./variables";
+
+// Import custom fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic');
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+// Import Bootstrap core scss
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Override Bootstrap components with custom properties
+@import "./bootstrap/card";
+
+// Import custom scss components that doesn't exist in Bootstrap
+@import "components";

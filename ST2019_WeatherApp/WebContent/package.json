@@ -1,0 +1,20 @@
+{
+  "name": "ST2019",
+  "version": "1.0.0",
+  "description": "ST2019 Master Course Project",
+  "author": "PU Plovdiv",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
