@@ -97,7 +97,7 @@
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between">
-                                <button type="button" class="btn btn-success">Влез</button>
+                                <button id="login-button" type="button" class="btn btn-success">Влез</button>
                                 <button type="button" class="btn btn-outline-success" 
                                 data-toggle="modal" 
                                 data-target="#registerModal">Регистрация</button>
@@ -154,36 +154,39 @@
                         </div>
                         <div class="form-group">
                             <label for="registerUsername">Потребителско име</label>
-                            <input type="text" class="form-control" id="registerUsername"
+                            <input type="text" class="form-control" 
+                            id="registerUsername"
                             placeholder="Въведи потребителско име">
                         </div>
                         <div class="form-group">
                             <label for="registerPassword">Парола</label>
-                            <input type="password" class="form-control" id="registerPassword" placeholder="Въведи парола">
+                            <input type="password" class="form-control" 
+                            id="registerPassword" placeholder="Въведи парола">
                         </div>
                         <div class="form-group">
                             <label for="repeatPassword">Повтори паролата</label>
-                            <input type="password" class="form-control" id="repeatPassword" placeholder="Повтори паролата">
+                            <input type="password" class="form-control" 
+                            id="repeatPassword" placeholder="Повтори паролата">
                         </div>
                     </form>
 
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Откажи</button>
-                  <button type="button" class="btn btn-success">Напред</button>
+                  <button id="confirm-register" type="button" class="btn btn-success">Напред</button>
                 </div>
               </div>
             </div>
           </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/selectors.js"></script>
 </body>
 
 
