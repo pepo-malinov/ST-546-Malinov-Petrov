@@ -64,7 +64,7 @@
                         <div class="row">
                             <div class="col-md-4"></div>
                             <div class="col">
-                                <span class="badge badge-pill badge-success">27 C</span>
+                                <span id="current-temp" class="badge badge-pill badge-success"></span>
                                 <label for="select-city">Коментар</label>
                                 <select id="select-city" class="custom-select">
                                     <option value="plovdiv">Пловдив</option>
@@ -90,26 +90,10 @@
             <div class="col mt-3 mt-md-5">
                 <div class="card">
                     <div class="card-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img src="images/clear_sky.png">    
-                                    </div>
-                                    <div class="col-md-6">
-                                       <span>20 C</span> 
-                                       <h4>Пловдив</h4>
-                                       <p>
-                                           Времето беше супер. Разхождах се по главната. Купих си сладолед...
-                                       </p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <button type="button" class="btn btn-danger remove-item">Изтрий</button>
-                                    </div>
-                                </div>
-                            </li>
+                        <ul id="comments-list" class="list-group">
+
                         
-                          </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -118,6 +102,47 @@
        
     </div>
 
+
+    <ul class="list-group d-none" id="comment-template">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/clear_sky.png">    
+                </div>
+                <div class="col-md-6">
+                    <span></span> 
+                    <h4></h4>
+                    <p>
+                        
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <button data-toggle="modal" data-target="#confirmDeleteModal" type="button" class="btn btn-danger remove-item">Изтрий</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Изтрий Публикация</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Сигурен ли си, че искаш да изтриеш тази публикация?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Откажи</button>
+                  <button id="confirm-delete" type="button" class="btn btn-danger">Изтрий</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
