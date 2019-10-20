@@ -13,12 +13,12 @@
 =============================================================
 ### Setting up the project at home for Eclipse - OS Windows 64bit
 
-*  Download eclipse jee for windows 64bit
+## Download eclipse jee for windows 64bit
 
 https://www.eclipse.org/downloads/packages/release/helios/sr1/eclipse-ide-java-ee-developers
 After running the installation select Eclipse for Enterprise development (probably the second choice)
 
-* Cloning the project
+## Cloning the project
 
 Open eclipse and select Window -> Perspective -> Other Perspective -> Other -> Git
 
@@ -42,7 +42,7 @@ On the right there should be the cloned project within a panel Project Explorer
 Go to File -> Open Projects from File System -> Choose directory and navigate to the folder where the project was cloned and select Finish
 
 
-* Setting up Tomcat server
+## Setting up Tomcat server
 
 https://tomcat.apache.org/download-90.cgi
 
@@ -69,7 +69,7 @@ Click on Finish
 
 Make sure that the newly added jdk in the list is checked
 
-[ ] jdk1.8…..
+    [ ] jdk1.8…..
 
 Click Apply and Close
 
@@ -84,11 +84,11 @@ Go to project facets and click on Convert to faceted form…
 
 Mark the options:
 
-[ ] Dynamic web module
+    [ ] Dynamic web module
 
-[ ] Java
+    [ ] Java
 
-[ ] Javascript
+    [ ] Javascript
 
 Click on  Dynamic web module
 
