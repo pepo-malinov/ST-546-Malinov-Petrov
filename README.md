@@ -10,13 +10,14 @@
 * Да се използват лейаутите предоставени в папка design и картинките добавени в images
 
 
+=============================================================
+### Setting up the project at home for Eclipse - OS Windows 64bit
 
-Setting up the project at home for Eclipse - OS Windows 64bit
-
-Download eclipse jee for windows 64bit
+1. Download eclipse jee for windows 64bit
 https://www.eclipse.org/downloads/packages/release/helios/sr1/eclipse-ide-java-ee-developers
 After running the installation select Eclipse for Enterprise development (probably the second choice)
 
+2. Cloning the project
 Open eclipse and select Window -> Perspective -> Other Perspective -> Other -> Git
 
 On the left should be a panel Git Repositories (if there is no such a panel go to Window -> Perspective -> Reset Perspective)
@@ -34,7 +35,7 @@ On the right there should be the cloned project within a panel Project Explorer
 Go to File -> Open Projects from File System -> Choose directory and navigate to the folder where the project was cloned and select Finish
 
 
-Setting up Tomcat server:
+3. Setting up Tomcat server:
 https://tomcat.apache.org/download-90.cgi
 Choose the zip file for Windows 64bit
 
