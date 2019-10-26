@@ -152,21 +152,18 @@ Enter 8181 or 8888 save and try to rerun the project on the server*
 или друг начин(погледнете примерните фигури на края на файла).
 За разработката на проекта използвайте:
 
-    [ ] jdk1.8…..
 
+#### HTML
 
+#### CSS
 
-    [ ] HTML
+#### JavaScript
 
-    [ ] CSS
+#### Bootstrap
 
-    [ ] JavaScript
+#### JQuery
 
-    [ ] Bootstrap
-
-    [ ] JQuery
-
-    [ ] Ajax
+#### Ajax
 
 
 Предаването на проекта трябва да се извърши лично до 08.12.2019г. Проекта е
