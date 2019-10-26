@@ -11,6 +11,19 @@
 
 
 =============================================================
+
+ас. Пенчо Малинов
+
+email: pepo.malinov@gmail.com
+
+ас. Александър Петров
+
+email: apetrovdev.@gmail.com
+
+skype: alexppetrov
+
+
+
 ### Setting up the project at home for Eclipse - OS Windows 64bit
 
 ## Download eclipse jee for windows 64bit
