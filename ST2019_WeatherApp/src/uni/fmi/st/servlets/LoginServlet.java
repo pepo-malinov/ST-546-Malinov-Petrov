@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import uni.fmi.st.models.User;
 
@@ -74,9 +75,11 @@ public class LoginServlet extends HttpServlet {
 					&& user.getPassword().equals(password);
 			final User loginUser = users.stream().filter(filter).findFirst().orElse(null);
 			if (null != loginUser) {
-				writer.append("Hi ");
-				writer.append(loginUser.getUsername());
-				writer.append("!");
+				final HttpSession session = request.getSession();
+				session.setAttribute("currentUser", loginUser);
+				writer.append("profile.jsp");
+				//request.getRequestDispatcher("profile.jsp").forward(request, response);
+				//response.sendRedirect("profile.jsp");
 			} else {
 				writer.append("Wrong username or password!");
 			}
