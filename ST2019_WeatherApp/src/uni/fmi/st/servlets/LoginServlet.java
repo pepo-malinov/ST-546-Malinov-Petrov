@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
+import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import uni.fmi.st.jdbc.UserRepo;
 import uni.fmi.st.models.User;
 
 /**
@@ -35,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		users = new ArrayList<>();
-		users.add(new User("Ivan", "password", "test@test.com"));
+		users.add(new User("Ivan", "password", "1222@test.com"));
 		users.add(new User("Pavel", "123123", "test2@test.com"));
 		users.add(new User("Kostadin", "asdasd", "test3@test.com"));
 	}
@@ -46,18 +48,16 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		final PrintWriter writer = response.getWriter();
-		users.forEach(user -> {
-			writer.append("User with username: ");
-			writer.append(user.getUsername());
-			writer.append(", password: ");
-			writer.append(user.getPassword());
-			writer.append(" and email: ");
-			writer.append(user.getEmail());
-			writer.append("::::");
-		});
-
-		// response.getWriter().append("Served at: ").append(request.getContextPath());
+		UserRepo userRepo = new UserRepo();
+		userRepo.addUser(users.get(0));
+		User user = userRepo.findUser("1222@test.com", "password");
+		if(null != user) {
+		System.out.println("User with username: "+user.getUsername()
+		+", email: "+user.getEmail()+" and password: "+user.getPassword()
+		+" exists!" );
+		}else {
+			System.out.println("User not found!");
+		}
 	}
 
 	/**
