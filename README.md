@@ -130,6 +130,10 @@ WebContent > WEB-INF > lib
 
 Right click and add the jar file to project build path
 
+## Connecting to a Database using JDBC
+
+http://www.h2database.com/html/tutorial.html#connecting_using_jdbc
+
 =============================================================
 
 ### ЗАДАНИЕ ПРАКТИКУМ МАГИСТРИ 2019/2020
