@@ -116,8 +116,6 @@ On the right there will be a Port Number for HTTP/1.1 which by default is 8080
 Enter 8181 or 8888 save and try to rerun the project on the server*
 
 
-=============================================================
-
 ## Adding H2 Database to the project
 
 Download the latest stable version
