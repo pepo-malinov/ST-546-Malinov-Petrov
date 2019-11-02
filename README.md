@@ -143,6 +143,6 @@ https://www.themoviedb.org/documentation/api?language=en-US
 
 Графичният интерфейс има следната функционалност:
 
-избор на година, търсене по критерий като "популярност", търсене по жанр и визуализиране на върнатите резултати
+избор на година, сортиране по критерий като "популярност", търсене по жанр и визуализиране на върнатите резултати
 
 ![alt text](https://raw.githubusercontent.com/pepo-malinov/ST-546-Malinov-Petrov/master/ST2019_WeatherApp/WebContent/design/example.png)
