@@ -118,6 +118,21 @@ Enter 8181 or 8888 save and try to rerun the project on the server*
 
 =============================================================
 
+## Adding H2 Database to the project
+
+Download the latest stable version
+
+Platform-Independent Zip from
+
+http://www.h2database.com/html/download.html
+
+Extract the zip file and add the h2-1.4.199jar to the project within the folder
+
+WebContent > WEB-INF > lib
+
+Right click and add the jar file to project build path
+
+=============================================================
 
 ### ЗАДАНИЕ ПРАКТИКУМ МАГИСТРИ 2019/2020
 
