@@ -139,7 +139,7 @@ Enter 8181 or 8888 save and try to rerun the project on the server*
 
 За реализация е използвано следното API
 
-[a link] (https://www.themoviedb.org/documentation/api?language=en-US)
+https://www.themoviedb.org/documentation/api?language=en-US
 
 Графичният интерфейс има следната функционалност:
 
