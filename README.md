@@ -163,3 +163,7 @@ https://www.themoviedb.org/documentation/api?language=en-US
 избор на година, сортиране по критерий като "популярност", търсене по жанр и визуализиране на върнатите резултати
 
 ![alt text](https://raw.githubusercontent.com/pepo-malinov/ST-546-Malinov-Petrov/master/ST2019_WeatherApp/WebContent/design/example.png)
+
+Като в примера е изпълнен следният request
+
+https://api.themoviedb.org/3/discover/movie?year=2019&api_key=ca3d69ee336e43d8099727f0d7ce3859
