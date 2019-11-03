@@ -128,11 +128,22 @@ Extract the zip file and add the h2-1.4.199jar to the project within the folder
 
 WebContent > WEB-INF > lib
 
-Right click and add the jar file to project build path
+Right click and add the jar file -> Build Path -> Add to Build path
 
 ## Connecting to a Database using JDBC
 
 http://www.h2database.com/html/tutorial.html#connecting_using_jdbc
+
+## Adding hibernate ORM to the project
+
+Download core jar files from:
+
+https://jar-download.com/artifacts/org.hibernate/hibernate-core/5.3.1.Final/source-code
+
+Add all the jar files to WEB-INF -> lib
+
+Select the jar files, Right click and add the jar file -> Build Path -> Add to Build path
+
 
 =============================================================
 
