@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import uni.fmi.st.jdbc.UserRepo;
+import uni.fmi.st.jpa.UserJPAManager;
 import uni.fmi.st.models.User;
 
 /**
@@ -48,16 +49,18 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		UserRepo userRepo = new UserRepo();
+		final UserJPAManager userRepo = new UserJPAManager();
 		userRepo.addUser(users.get(0));
-		User user = userRepo.findUser("1222@test.com", "password");
+		final User user = userRepo.findUser("1222@test.com", "password");
 		if(null != user) {
-		System.out.println("User with username: "+user.getUsername()
-		+", email: "+user.getEmail()+" and password: "+user.getPassword()
-		+" exists!" );
-		}else {
-			System.out.println("User not found!");
+			System.out.println("User with name: "
+						+ user.getUsername()+" exsists!");
+			
 		}
+		else {
+			System.out.println("NOT EXsists!");
+		}
+		
 	}
 
 	/**
