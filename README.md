@@ -144,6 +144,24 @@ Add all the jar files to WEB-INF -> lib
 
 Select the jar files, Right click and add the jar file -> Build Path -> Add to Build path
 
+If no actions are available go to the project root directory -> Right click go to properties and Build path and add the jars manually
+
+Right click on the project go to Project facets and mark
+
+    [ ] JPA
+
+Configure JPA Facet and at JPA implementation chose
+
+    [ ] Disable Library Configuration
+
+At the bottom Persistent class management mark
+
+    [ ] Annotated classes must be listed in persistence.xml
+
+Then click ok
+
+In Java Resources -> src -> META-INF a persistence.xml should be added
+
 
 =============================================================
 
