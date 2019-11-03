@@ -17,7 +17,8 @@ public class UserRepo {
 	 */
 	public boolean addUser(final User newUser) {
 
-		final String sql = "INSERT INTO USER (USERNAME, EMAIL, PASSWORD) " + "VALUES(?,?,?)";
+		final String sql = "INSERT INTO USER (USERNAME, EMAIL, "
+				+ "PASSWORD) " + "VALUES(?,?,?);";
 		Connection connection = DBManager.getInstance().getConnection();
 		PreparedStatement prepareStatement = null;
 		try {
