@@ -162,6 +162,11 @@ Then click ok
 
 In Java Resources -> src -> META-INF a persistence.xml should be added
 
+The configuration made in the persistence.xml files should be similar to:
+
+https://gist.github.com/jorgevs/218483e7ba854e8e6e23be18182b0381
+
+for reference use the one within our current project
 
 =============================================================
 
