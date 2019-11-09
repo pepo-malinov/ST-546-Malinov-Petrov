@@ -54,11 +54,11 @@ public class LoginServlet extends HttpServlet {
 		final User user = userRepo.findUser("1222@test.com", "password");
 		if(null != user) {
 			System.out.println("User with name: "
-						+ user.getUsername()+" exsists!");
+						+ user.getUsername()+" exists!");
 			
 		}
 		else {
-			System.out.println("NOT EXsists!");
+			System.out.println("NOT Exists!");
 		}
 		
 	}
@@ -74,9 +74,8 @@ public class LoginServlet extends HttpServlet {
 
 		final PrintWriter writer = response.getWriter();
 		if (null != email && null != password) {
-			final Predicate<? super User> filter = user -> user.getEmail().equals(email)
-					&& user.getPassword().equals(password);
-			final User loginUser = users.stream().filter(filter).findFirst().orElse(null);
+			final User loginUser = new UserJPAManager()
+									.findUser(email, password);
 			if (null != loginUser) {
 				final HttpSession session = request.getSession();
 				session.setAttribute("currentUser", loginUser);
