@@ -235,12 +235,11 @@ https://git-scm.com/downloads
 
     git commit -m "first commit"
 
-* Тук трябва да замените URL-a с този на вашето репозитори
-
     git remote add origin https://github.com/AlexanderPPetrov/Praktikum.git
 
     git push -u origin master
 
+* Тук трябва да замените URL-a с този на вашето репозитори
 
 За да качите следващи промени отворете терминала
 
