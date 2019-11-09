@@ -231,22 +231,22 @@ https://git-scm.com/downloads
 
 За да качите проекта в github може да отворите терминала и да използвате следните команди
 
-git init
+    git init
 
-git commit -m "first commit"
+    git commit -m "first commit"
 
 * Тук трябва да замените URL-a с този на вашето репозитори
 
-git remote add origin https://github.com/AlexanderPPetrov/Praktikum.git
+    git remote add origin https://github.com/AlexanderPPetrov/Praktikum.git
 
-git push -u origin master
+    git push -u origin master
 
 
 За да качите следващи промени отворете терминала
 
-git commit -a -m "Message to describe what has been changed/added"
+    git commit -a -m "Message to describe what has been changed/added"
 
-git push
+    git push
 
 При затруднения се свържете на скайп:
 
