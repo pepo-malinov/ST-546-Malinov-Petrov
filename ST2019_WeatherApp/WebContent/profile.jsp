@@ -3,24 +3,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<jsp:useBean id="user" scope="session" class="uni.fmi.st.models.User"></jsp:useBean>
 <%
-	User user2 = new User();
-	// add user to session
-	//session.setAttribute("user", user2);
 	User currentUser = (User)session.getAttribute("currentUser");
  	// redirect to index.html if login user does not exist.
-	/* if(null == currentUser){
+	if (null == currentUser) {
 		response.sendRedirect("index.html");
 		return;
-	} */
+	}
 %>
-<%-- set email to user --%>
-<%-- <jsp:setProperty property="email" name="user" value="email@tst.com" /> --%>
-
-<%-- set user properties from request --%>
-<jsp:setProperty property="*"  name="user"/>
-<% user2.setEmail("email@tst.com"); %>
 <!doctype html>
 <html lang="en">
 
@@ -98,15 +88,15 @@
 									<label for="user">Потребител</label> <input type="text"
 										class="form-control" id="user" placeholder="Въведи потребител"
 										<%-- set value from session currentUser --%>
-										<%-- value="<%=((User) session.getAttribute("currentUser")).getUsername()%>"> --%>
-										value='<jsp:getProperty property="username" name="user"/>'>
+										value="<%=currentUser.getUsername()%>"> 
+										
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="email">Email</label> <input type="email"
 										class="form-control" id="email" placeholder="Въведи email"
-										value="<jsp:getProperty property="email" name="user"/>">
+										value="<%=currentUser.getEmail()%>">
 								</div>
 							</div>
 						</div>
@@ -115,14 +105,14 @@
 								<div class="form-group">
 									<label for="password">Парола</label> <input type="password"
 										class="form-control" id="password" placeholder="Въведи парола"
-										value="<jsp:getProperty property="password" name="user"/>">
+										value="<%=currentUser.getPassword()%>">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="repeat-password">Повтори парола</label> <input
 										type="password" class="form-control" id="repeat-password"
-										placeholder="Повтори парола" value="<jsp:getProperty property="password" name="user"/>">
+										placeholder="Повтори парола" value="<%=currentUser.getPassword()%>">
 								</div>
 							</div>
 						</div>
