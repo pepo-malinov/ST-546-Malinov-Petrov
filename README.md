@@ -201,3 +201,53 @@ https://www.themoviedb.org/documentation/api?language=en-US
 Като в примера е изпълнен следният request
 
 https://api.themoviedb.org/3/discover/movie?year=2019&api_key=ca3d69ee336e43d8099727f0d7ce3859
+
+
+=============================================================
+
+### Регистрация в github
+
+Създайте акаунт в
+
+https://github.com/join?source=header-home
+
+Влезте в акаунта си и създайте ново repository
+
+![alt text](https://raw.githubusercontent.com/pepo-malinov/ST-546-Malinov-Petrov/master/ST2019_WeatherApp/WebContent/design/create_repository.png)
+
+За създаването на проекта може да използвате VSCode като го свалите за съответната операционна система
+
+https://code.visualstudio.com/download
+
+За да може да качите проекта си в github ще е нужно да инсталирате git за вашата операционна система
+
+https://git-scm.com/downloads
+
+Създайте празна папка praktikum някъде в дисковото пространство и отворете тази директория през VSCode
+
+Добавете нов файл index.html и създайте необходимата структура -> папка js с main.js файл, който да се зарежда в index.html-a
+
+![alt text](https://raw.githubusercontent.com/pepo-malinov/ST-546-Malinov-Petrov/master/ST2019_WeatherApp/WebContent/design/create_project.png)
+
+За да качите проекта в github може да отворите терминала и да използвате следните команди
+
+git init
+
+git commit -m "first commit"
+
+* Тук трябва да замените URL-a с този на вашето репозитори
+
+git remote add origin https://github.com/AlexanderPPetrov/Praktikum.git
+
+git push -u origin master
+
+
+За да качите следващи промени отворете терминала
+
+git commit -a -m "Message to describe what has been changed/added"
+
+git push
+
+При затруднения се свържете на скайп:
+
+alexppetrov
