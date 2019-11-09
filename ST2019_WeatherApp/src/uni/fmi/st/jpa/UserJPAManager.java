@@ -3,34 +3,23 @@ package uni.fmi.st.jpa;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import uni.fmi.st.models.User;
 
-public class UserJPAManager {
+public class UserJPAManager extends JPAManager<User> {
+	
 
-	private EntityManager getEntityManager() {
-		final EntityManagerFactory emf = Persistence
-							.createEntityManagerFactory("H2DB");
-		return emf.createEntityManager();
-
-	}
-
-	public void addUser(final User user) {
-		final EntityManager entityManager = getEntityManager();
-		entityManager.getTransaction().begin();
-		entityManager.persist(user);
-		entityManager.getTransaction().commit();
-		entityManager.close();
+	public UserJPAManager() {
+		super(User.class);
 	}
 
 	public User findUser(final String email, final String password) {
 		final String sql = "SELECT u FROM " + User.class.getName() + " u WHERE u.email= :email"
 				+ " AND u.password = :pass";
 		final EntityManager entityManager = getEntityManager();
-		final TypedQuery<User> query = entityManager.createQuery(sql, User.class);
+		final TypedQuery<User> query = entityManager
+						.createQuery(sql, User.class);
 		query.setParameter("email", email);
 		query.setParameter("pass", password);
 		final List<User> resultList = query.getResultList();
@@ -38,6 +27,17 @@ public class UserJPAManager {
 			return resultList.get(0);
 		}
 		return null;
+	}
+
+	public boolean userExists(final String email) {
+		final String sql = "SELECT COUNT(u) FROM " + User.class.getName()
+						+ " u WHERE u.email= :email";
+		final EntityManager entityManager = getEntityManager();
+		final TypedQuery<Long> query = entityManager
+				.createQuery(sql, Long.class);
+		query.setParameter("email", email);
+		boolean result = query.getSingleResult() > 0;
+		return result;
 	}
 
 }

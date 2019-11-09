@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.catalina.connector.Response;
 
+import uni.fmi.st.jpa.PostJPAManager;
 import uni.fmi.st.jpa.UserJPAManager;
 import uni.fmi.st.models.User;
 
@@ -47,11 +48,17 @@ public class RegisterServlet extends HttpServlet {
 		final String username = request.getParameter("username");
 
 		if (null != email && null != password && null != username) {
-			final User loginUser = new User(username, password, email);
-			new UserJPAManager().addUser(loginUser);
-			final HttpSession session = request.getSession();
-			session.setAttribute("currentUser", loginUser);
-			response.sendRedirect("profile.jsp");
+			UserJPAManager userJPAManager = new UserJPAManager();
+			if(userJPAManager.userExists(email)) {
+				final PrintWriter writer = response.getWriter();
+				writer.append("Wrong email!");
+			} else {
+				final User loginUser = new User(username, password, email);
+				userJPAManager.add(loginUser);
+				final HttpSession session = request.getSession();
+				session.setAttribute("currentUser", loginUser);
+				response.sendRedirect("profile.jsp");
+			}
 
 		} else {
 			response.setStatus(Response.SC_BAD_REQUEST);

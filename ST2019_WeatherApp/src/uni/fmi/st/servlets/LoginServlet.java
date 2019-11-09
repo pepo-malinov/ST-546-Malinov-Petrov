@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		final UserJPAManager userRepo = new UserJPAManager();
-		userRepo.addUser(users.get(0));
+		userRepo.add(users.get(0));
 		final User user = userRepo.findUser("1222@test.com", "password");
 		if(null != user) {
 			System.out.println("User with name: "

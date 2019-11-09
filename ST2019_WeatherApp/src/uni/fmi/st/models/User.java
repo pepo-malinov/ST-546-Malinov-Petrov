@@ -1,30 +1,27 @@
 package uni.fmi.st.models;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 @Entity(name = "User")
 public class User implements Serializable {
 	private static final long serialVersionUID = 2L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	private String username;
 	private String password;
 	@Column(name="email",nullable=false, unique=true )
 	private String email;
+	@OneToMany(mappedBy="owner")
+	private List<Post> posts;
 
 	public User() {
 
@@ -41,6 +38,14 @@ public class User implements Serializable {
 		this.username = username;
 		this.password = password;
 		this.email = email;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	/**
@@ -83,6 +88,14 @@ public class User implements Serializable {
 	 */
 	public void setEmail(final String email) {
 		this.email = email;
+	}
+
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
 	}
 
 }

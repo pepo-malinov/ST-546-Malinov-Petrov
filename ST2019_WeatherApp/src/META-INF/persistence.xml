@@ -6,6 +6,7 @@
 	<persistence-unit name="H2DB" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<class>uni.fmi.st.models.User</class>
+		<class>uni.fmi.st.models.Post</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
 				value="org.h2.Driver" />
