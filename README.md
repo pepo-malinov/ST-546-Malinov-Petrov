@@ -168,6 +168,33 @@ https://gist.github.com/jorgevs/218483e7ba854e8e6e23be18182b0381
 
 for reference use the one within our current project
 
+### Creating project with Spring Initializr
+
+https://start.spring.io/
+
+Единствена промяна в предефинираната конфигурация е в Options -> Packaging -> War
+
+В Dependencies -> Search dependencies to add, добавяме:
+
+    Spring web
+
+    Spring Boot DevTools
+
+    Spring Data JPA
+
+    Spring Boot Actuator
+
+    H2 Database
+
+Generate -> Save and extract the zip file
+
+Close existing projects in eclipse
+
+Go to File -> Import -> Maven -> Existing Maven Projects ->
+
+select the extracted directory and click Finish
+
+
 =============================================================
 
 ### ЗАДАНИЕ ПРАКТИКУМ МАГИСТРИ 2019/2020
